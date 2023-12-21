@@ -6,12 +6,12 @@ for i = 1:length(alpha_values)
     alpha = alpha_values(i);
     equation_to_solve = @(r) fonctionisco(r, alpha, M) - r;
 
-    r_initial_guess = 7; % Choisissez une valeur non nulle
+    r_initial_guess = 7; 
 
     try
         r_solutions(i) = fzero(equation_to_solve, r_initial_guess);
     catch
-        r_solutions(i) = NaN; % Si fzero échoue, assignez NaN ou une autre valeur par défaut
+        r_solutions(i) = NaN; 
     end
 end
 
